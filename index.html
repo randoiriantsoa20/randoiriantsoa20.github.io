@@ -3,67 +3,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio | Data Analyst</title>
-    <!-- Utilisation d'un CSS minimaliste et élégant (Water.css) -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css">
+    <title>Rando Iriantsoa R. | Data Analyst Portfolio</title>
+    <!-- Chargement d'une police professionnelle (Inter) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
-        body { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-        .project-card { border: 1px solid #e1e4e8; padding: 20px; border-radius: 6px; margin-bottom: 20px; }
-        .tag { background: #f1f8ff; color: #0366d6; padding: 4px 8px; border-radius: 4px; font-size: 0.85em; font-weight: bold; margin-right: 5px; }
+        /* --- VARIABLES DE DESIGN --- */
+        :root {
+            --bg-color: #111111;        /* Fond noir profond */
+            --card-bg: #1a1a1a;        /* Cartes légèrement plus claires */
+            --text-main: #ffffff;      /* Texte blanc pur */
+            --text-sub: #a1a1a1;       /* Texte gris secondaire */
+            --accent: #2ecc71;          /* Accent vert (tech) */
+            --accent-soft: #2ecc7120;  /* Fond tag soft */
+            --border: #2a2a2a;         /* Bordures fines */
+        }
+
+        /* --- STYLES GENERAUX --- */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            margin-top: 50px;
+        }
+
+        h1, h2, h3 { font-weight: 800; }
+        p { color: var(--text-sub); line-height: 1.6; }
+        a { color: var(--accent); text-decoration: none; transition: 0.3s; }
+        a:hover { opacity: 0.8; }
+
+        /* --- HEADER & CONTACT --- */
+        header { margin-bottom: 60px; }
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 0px;
+            margin-top: 0px;
+        }
+        header p.subtitle {
+            font-size: 1.3em;
+            font-weight: 600;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            color: var(--text-main);
+        }
+        .contact-links { margin-top: 20px; }
+        .contact-links a {
+            margin-right: 15px;
+            border: 1px solid var(--border);
+            padding: 8px 15px;
+            border-radius: 5px;
+            background: var(--card-bg);
+            font-weight: 600;
+        }
+
+        /* --- SECTIONS (À PROPOS) --- */
+        section { margin-bottom: 60px; }
+        h2.section-title {
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        /* --- PROJETS CARDS --- */
+        .project-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        .project-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            padding: 30px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+        .project-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+        }
+        .project-card h3 { margin-top: 0px; margin-bottom: 10px; }
+        .project-card p { margin-bottom: 20px; }
+
+        /* --- TAGS (Compétences) --- */
+        .tags { display: flex; flex-wrap: wrap; margin-bottom: 20px; }
+        .tag {
+            background-color: var(--accent-soft);
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 0.8em;
+            padding: 5px 12px;
+            border-radius: 20px;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            margin-top: 100px;
+            padding: 30px 0;
+            border-top: 1px solid var(--border);
+            text-align: center;
+        }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Rando Iriantsoa RAZANAJATOVO</h1>
-        <p><strong>Data Analyst</strong> | Spécialisé en SQL, Python & Business Intelligence</p>
-        <p><a href="[Lien LinkedIn]">LinkedIn</a> | <a href="[Lien GitHub]">GitHub</a> | <a href="mailto:votre.email@email.com">Contact</a></p>
-    </header>
+    <div class="container">
 
-    <hr>
+        <header>
+            <h1>Rando Iriantsoa<br>RAZANAJATOVO</h1>
+            <p class="subtitle">Data Analyst | Spécialisé en SQL, Python & Business Intelligence</p>
+            <div class="contact-links">
+                <a href="[Lien LinkedIn]">LinkedIn</a>
+                <a href="[Lien GitHub]">GitHub</a>
+                <a href="mailto:votre.email@email.com">Contact</a>
+            </div>
+        </header>
 
-    <section id="about">
-        <h2>À propos</h2>
-        <p>Passionné par la transformation des données brutes en décisions stratégiques. J'aime concevoir des architectures de données propres, écrire des requêtes SQL optimisées et créer des visualisations percutantes pour résoudre des problématiques business complexes.</p>
-    </section>
+        <section id="about">
+            <h2 class="section-title">À propos</h2>
+            <p>Passionné par la transformation des données brutes en décisions stratégiques. J'aime concevoir des architectures de données propres, écrire des requêtes SQL optimisées et créer des visualisations percutantes pour résoudre des problématiques business complexes.</p>
+        </section>
 
-    <hr>
+        <section id="projects">
+            <h2 class="section-title">Mes Projets Data</h2>
+            
+            <div class="project-list">
+                
+                <!-- Projet 1 -->
+                <article class="project-card">
+                    <h3>Projet 1 : Optimisation et Nettoyage d'une Base de Données Ventes</h3>
+                    <p>Nettoyage et agrégation de données de ventes massives et incohérentes pour un site e-commerce.</p>
+                    <div class="tags">
+                        <span class="tag">SQL</span>
+                        <span class="tag">PostgreSQL</span>
+                        <span class="tag">Data Cleaning</span>
+                    </div>
+                    <a href="[Lien vers le dépôt GitHub]" target="_blank">Consulter le code sur GitHub →</a>
+                </article>
 
-    <section id="projects">
-        <h2>Mes Projets Data</h2>
+                <!-- Projet 2 (Exemple pour montrer le design) -->
+                <article class="project-card">
+                    <h3>Projet 2 : Dashboard de Performance Business</h3>
+                    <p>Création d'un tableau de bord interactif sous Power BI pour le suivi des KPI de vente.</p>
+                    <div class="tags">
+                        <span class="tag">Power BI</span>
+                        <span class="tag">DAX</span>
+                        <span class="tag">Data Viz</span>
+                    </div>
+                    <a href="#" target="_blank">Voir le Dashboard →</a>
+                </article>
 
-        <!-- Projet 1 -->
-        <div class="project-card">
-            <h3>Projet 1 : Optimisation et Nettoyage d'une Base de Données Ventes</h3>
-            <p><strong>Problématique :</strong> Nettoyage et agrégation de données de ventes massives et incohérentes pour un site e-commerce.</p>
-            <p><strong>Actions :</strong> Écriture de requêtes SQL avancées (Jointures complexes, CTE, Window Functions) sous PostgreSQL pour structurer et nettoyer la donnée.</p>
-            <p>
-                <span class="tag">SQL</span>
-                <span class="tag">PostgreSQL</span>
-                <span class="tag">Data Cleaning</span>
-            </p>
-            <p><a href="#" target="_blank">Consulter le code sur GitHub →</a></p>
-        </div>
+            </div>
+        </section>
 
-        <!-- Projet 2 -->
-        <div class="project-card">
-            <h3>Projet 2 : Dashboard Interactif de Performance Business</h3>
-            <p><strong>Problématique :</strong> Permettre à l'équipe dirigeante de suivre le chiffre d'affaires et les marges en temps réel.</p>
-            <p><strong>Actions :</strong> Création d'un modèle de données en étoile et conception d'un tableau de bord interactif sous Power BI avec des indicateurs clés (KPIs).</p>
-            <p>
-                <span class="tag">Power BI</span>
-                <span class="tag">DAX</span>
-                <span class="tag">Data Viz</span>
-            </p>
-            <p><a href="#" target="_blank">Voir le Dashboard Interactif →</a></p>
-        </div>
+        <footer>
+            <p>© 2026 Rando Iriantsoa R. — Data Analyst Portfolio</p>
+        </footer>
 
-    </section>
-
-    <footer>
-        <hr>
-        <p>© 2026 - Conçu avec soin pour mon parcours en Data Analyse</p>
-    </footer>
+    </div>
 
 </body>
 </html>
